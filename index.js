@@ -30,12 +30,7 @@ app.use((req,res,next)=>{
     next()
 })
 
-//http://localhost:4000/
-app.get('/', (req, res) => {
-    return res.json({
-        message: "Homepage"
-    })
-})
+app.use('',require('./routes/routes'))
 
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`)
