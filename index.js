@@ -31,6 +31,9 @@ app.use((req,res,next)=>{
     next()
 })
 
+//folder uploads
+app.use(express.static('uploads'))
+
 //set template engine
 app.use(express.static(path.join(__dirname,"node_modules/bootstrap/dist/")))
 app.set("view engine","ejs")
